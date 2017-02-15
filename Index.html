@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="FibApp">
+    <head>
+        <link data-require="bootstrap-css@*" data-semver="4.0.0-alpha.4" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" />
+    </head>
+
+    <body>
+        <div class="container" ng-controller="FibCtrl">
+            <h2>Fibonacci Sequence Calculator</h2>
+            <form>
+                <p>Enter the index number you want to calculate until</p>
+                <input type="number" ng-model="indexnum">
+                <input type="submit" ng-click="fillFibArray()">
+            </form>
+
+            <ul>
+                <li ng-repeat="item in fibArray track by $index">{{item}}</li>
+            </ul>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script type="text/javascript" src="App.js"></script>
+        <script type="text/javascript" src="FibCtrl.js"></script>
+    </body>
+</html>
